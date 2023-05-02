@@ -194,7 +194,7 @@ document.addEventListener('keydown', function(event) {
     if(event.altKey && event.shiftKey && memory === 'En'){
         memory = 'Ru'
         console.log(memory);
-        window.localStorage.setItem('name', `${memory}`)        
+        window.localStorage.setItem('name-key', `${memory}`)        
         let row1 = [...wrapperRow1.children]
         console.log(wrapperRow1.children);
         for(let i = 0;i < row1.length;i++){
@@ -227,7 +227,7 @@ document.addEventListener('keydown', function(event) {
       }else{
         if(event.altKey && event.shiftKey && memory === 'Ru'){
             memory = 'En'
-            window.localStorage.setItem('name', `${memory}`)
+            window.localStorage.setItem('name-key', `${memory}`)
             let row1 = [...wrapperRow1.children]
             console.log(wrapperRow1.children);
             for(let i = 0;i < row1.length;i++){
@@ -343,17 +343,17 @@ let resMemory = 'En'
 // window.localStorage.setItem('name', `${resMemory}`)
 let memory = resMemory
 function getMemory(){
-    if(!window.localStorage.getItem('name')){
+    if(!window.localStorage.getItem('name-key')){
 // memory = 'En'
-window.localStorage.setItem('name', `${memory}`)
+window.localStorage.setItem('name-key', `${memory}`)
     }else{
-        memory =  window.localStorage.getItem('name')
+        memory =  window.localStorage.getItem('name-key')
     }
 
 }
 
     // window.localStorage.getItem('name')
-console.log(window.localStorage.getItem('name'));
+console.log(window.localStorage.getItem('name-key'));
 
 let wrapperRow1 = document.createElement('div')
 wrapperRow1.classList.add('wrapperRow1')
